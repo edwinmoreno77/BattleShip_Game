@@ -42,7 +42,7 @@
    ```
 
 
-   ```bash
+```bash
    Directory structure:
 └── edwinmoreno77-battleship_game/
     ├── README.md

@@ -40,7 +40,10 @@
    ```bash
    Abre tu navegador y ve a http://localhost:3000 para jugar.
    ```
-
+## Desplegado en:
+```bash
+https://battle-ship-game-delta.vercel.app/
+```
 
 ```bash
    Directory structure:

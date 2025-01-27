@@ -7,9 +7,12 @@ const BackgroundMusic = ({ src }) => {
   useEffect(() => {
     const audio = audioRef.current;
 
-    audio.play().catch((err) => {
-      console.warn("El audio no se pudo reproducir automáticamente:", err);
-    });
+    if (audio) {
+      audio.volume = 0.1; // Ajusta el volumen (0.1 es el 10% del volumen máximo)
+      audio.play().catch((err) => {
+        console.warn("El audio no se pudo reproducir automáticamente:", err);
+      });
+    }
 
     // Pausar el audio al salir del componente
     return () => {

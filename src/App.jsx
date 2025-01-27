@@ -5,11 +5,13 @@ import { useConfetti } from "./hooks/useConfetti";
 import { useComputerAttack } from "./hooks/useComputerAttack";
 import BackgroundMusic from "./components/BackgroundMusic";
 import battleMusic from "./assets/audio/Battle.mp3";
+import Logs from "./components/Logs";
 
 function App() {
   const { isPlayerTurn, gameStatus, logs, computerBoard } = useSelector(
     (state) => state.game
   );
+
   useConfetti(gameStatus, computerBoard);
   useComputerAttack(gameStatus, isPlayerTurn);
 
@@ -42,22 +44,7 @@ function App() {
             <Board isEnemy />
           </div>
         </section>
-
-        <section className="bg-white/20 backdrop-blur-sm p-4 rounded-lg shadow-md font-serif">
-          <h3 className="text-lg font-bold mb-3 text-white">
-            Registro de Batalla
-          </h3>
-          <article className="h-40 overflow-y-auto bg-black/20 p-2 rounded">
-            {logs.map((log, i) => (
-              <div
-                key={i}
-                className="text-sm py-1 border-b border-white/30 text-white"
-              >
-                {log}
-              </div>
-            ))}
-          </article>
-        </section>
+        <Logs />
 
         {gameStatus === "gameover" && (
           <div className="mt-4 text-center text-xl font-bold text-white bg-black/40 p-4 rounded-lg">

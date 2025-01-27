@@ -7,7 +7,7 @@ export const useComputerAttack = (gameStatus, isPlayerTurn) => {
 
   useEffect(() => {
     if (gameStatus === "playing" && !isPlayerTurn) {
-      const timeout = setTimeout(() => dispatch(computerAttack()), 500);
+      const timeout = setTimeout(() => dispatch(computerAttack()), 500); // tiempo de ataque de la computadora
       return () => clearTimeout(timeout);
     }
   }, [gameStatus, isPlayerTurn, dispatch]);

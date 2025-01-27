@@ -2,6 +2,8 @@
 
 **Battleship** es una implementación del clásico juego de batalla naval en la web. El juego te permite enfrentarte a la computadora, colocando tus barcos en un tablero y luego atacando al enemigo en un tablero similar. El juego utiliza `React` para la interfaz de usuario y `Redux` para la gestión del estado.
 
+![BattleShop](https://github.com/edwinmoreno77/BattleShip_Game/blob/main/src/assets/img/battleShip_img.png)
+
 ## Características
 
 - **Tablero interactivo**: Coloca tus barcos y realiza ataques sobre el tablero del enemigo.

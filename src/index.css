@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply bg-gray-100;
+}
+
+/* Personalización adicional */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-blue-500;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-blue-900 rounded;
+}

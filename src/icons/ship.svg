@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" 
+  viewBox="0 0 100 100"
+  fill="currentColor"
+  stroke="currentColor"
+  stroke-width="1.2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <!-- Casco principal -->
+  <path d="M5 70 Q25 65 50 70 T95 70 L90 85 L10 85 Z" fill="currentColor"/>
+  
+  <!-- Superestructura -->
+  <rect x="30" y="50" width="40" height="20" fill="currentColor" rx="2"/>
+  
+  <!-- Torre de mando -->
+  <polygon points="45,40 55,40 58,50 42,50" fill="currentColor"/>
+  
+  <!-- Torre principal -->
+  <circle cx="50" cy="45" r="8" fill="currentColor"/>
+  <rect x="47" y="35" width="6" height="10" fill="currentColor"/>
+  
+  <!-- Cañones -->
+  <g transform="translate(35 45)">
+    <rect x="0" y="0" width="30" height="6" fill="currentColor" rx="3"/>
+    <line x1="5" y1="3" x2="5" y2="-10" stroke="currentColor" stroke-width="2"/>
+    <line x1="15" y1="3" x2="15" y2="-10" stroke="currentColor" stroke-width="2"/>
+    <line x1="25" y1="3" x2="25" y2="-10" stroke="currentColor" stroke-width="2"/>
+  </g>
+  
+  <!-- Radar -->
+  <g transform="translate(50 30)">
+    <circle cx="0" cy="0" r="5" fill="currentColor"/>
+    <path d="M-5 0 L5 0 M0 -5 L0 5" stroke="currentColor"/>
+  </g>
+  
+  <!-- Detalles del casco -->
+  <g stroke="currentColor">
+    <line x1="20" y1="70" x2="25" y2="70"/>
+    <line x1="30" y1="70" x2="35" y2="70"/>
+    <line x1="65" y1="70" x2="70" y2="70"/>
+    <line x1="75" y1="70" x2="80" y2="70"/>
+  </g>
+  
+  <!-- Ventanas -->
+  <g fill="#cbd5e1">
+    <circle cx="40" cy="58" r="1.5"/>
+    <circle cx="45" cy="58" r="1.5"/>
+    <circle cx="50" cy="58" r="1.5"/>
+    <circle cx="55" cy="58" r="1.5"/>
+    <circle cx="60" cy="58" r="1.5"/>
+  </g>
+</svg>

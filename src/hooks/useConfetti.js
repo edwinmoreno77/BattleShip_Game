@@ -1,11 +1,7 @@
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 import confetti from "canvas-confetti";
-import { computerAttack } from "../store/game/gameSlice";
-import { useRef } from "react";
-import { useDispatch } from "react-redux";
 
-export const useConfetti = (gameStatus, computerBoard, isPlayerTurn) => {
-  const dispatch = useDispatch();
+export const useConfetti = (gameStatus, computerBoard) => {
   const confettiFired = useRef(false);
 
   // Reiniciar confeti cuando comienza un nuevo juego
@@ -22,11 +18,6 @@ export const useConfetti = (gameStatus, computerBoard, isPlayerTurn) => {
   };
 
   useEffect(() => {
-    if (gameStatus === "playing" && !isPlayerTurn) {
-      const timeout = setTimeout(() => dispatch(computerAttack()), 100);
-      return () => clearTimeout(timeout);
-    }
-
     if (
       gameStatus === "gameover" &&
       checkPlayerWins() &&
@@ -77,5 +68,5 @@ export const useConfetti = (gameStatus, computerBoard, isPlayerTurn) => {
       })();
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [gameStatus, isPlayerTurn, dispatch, computerBoard]);
+  }, [gameStatus, computerBoard]);
 };

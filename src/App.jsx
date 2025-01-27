@@ -2,16 +2,21 @@ import { useSelector } from "react-redux";
 import Board from "./components/Board";
 import Controls from "./components/Controls";
 import { useConfetti } from "./hooks/useConfetti";
+import { useComputerAttack } from "./hooks/useComputerAttack";
+import BackgroundMusic from "./components/BackgroundMusic";
+import battleMusic from "./assets/audio/Battle.mp3";
 
 function App() {
   const { isPlayerTurn, gameStatus, logs, computerBoard } = useSelector(
     (state) => state.game
   );
-  useConfetti(gameStatus, computerBoard, isPlayerTurn);
+  useConfetti(gameStatus, computerBoard);
+  useComputerAttack(gameStatus, isPlayerTurn);
 
   return (
     <main className="min-h-screen relative p-5">
       <div className="absolute inset-0 -z-10 h-full w-full bg-[radial-gradient(125%_125%_at_50%_10%,#111827_35%,#3b82f6_100%)]"></div>
+      <BackgroundMusic src={battleMusic} />
 
       <div className="max-w-4xl mx-auto relative z-20">
         <section className="text-center py-4">
